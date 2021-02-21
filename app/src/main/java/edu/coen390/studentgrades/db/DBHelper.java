@@ -2,9 +2,12 @@ package edu.coen390.studentgrades.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
+
 import edu.coen390.studentgrades.Models.*;
 
 public class DBHelper extends SQLiteOpenHelper {
@@ -37,6 +40,8 @@ public class DBHelper extends SQLiteOpenHelper {
                 + Config.COLUMN_COURSE_CODE +   "TEXT NOT NULL"
                 +")";
 
+
+
         Log.d(TAG, "Table creation Query: " + CREATE_COURSE_TABLE);
         db.execSQL(CREATE_COURSE_TABLE);
         Log.d(TAG, "Course Table created Successfully");
@@ -60,8 +65,17 @@ public class DBHelper extends SQLiteOpenHelper {
         courseContentValues.put(Config.COLUMN_COURSE_ID, course.getCourseID());
         courseContentValues.put(Config.COLUMN_COURSE_CODE, course.getCourseCode());
 
-        db.insert(Config.TABLE_NAME_ASSIGNMENT,null,courseContentValues);
-        return -1;
+        try{
+            id = db.insertOrThrow(Config.TABLE_NAME_COURSE,null,courseContentValues);
+        }catch (SQLException e){
+            Log.d(TAG, "Exception: " + e.getMessage());
+            Toast.makeText(context,"Operation Failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        } finally {
+            db.close();
+        }
+
+
+        return id;
     }
 
     public long insertAssignment(Assignment assignment){
