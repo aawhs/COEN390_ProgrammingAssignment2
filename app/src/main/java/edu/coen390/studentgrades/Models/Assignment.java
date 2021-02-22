@@ -13,6 +13,7 @@ public class Assignment {
         this.assignmentTitle = assignmentTitle;
         this.grade = grade;
     }
+
     /*************** Setters ***************/
     public void setAssID(long assID) {
         this.assID = assID;
@@ -29,6 +30,7 @@ public class Assignment {
     public void setGrade(double grade) {
         this.grade = grade;
     }
+
     /*************** Getters ***************/
     public long getAssID() {
         return assID;
@@ -44,5 +46,10 @@ public class Assignment {
 
     public double getGrade() {
         return grade;
+    }
+
+    @Override
+    public String toString() {
+        return assignmentTitle + "\n" + grade;
     }
 }

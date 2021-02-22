@@ -4,7 +4,7 @@ public class Config {
     public static final String DATABASE_NAME = "student-db";
 
     public static final String TABLE_NAME_COURSE = "course";
-    public static final String COLUMN_COURSE_ID = "_id";
+    public static final String COLUMN_COURSE_ID = "_courseID";
     public static final String COLUMN_COURSE_TITLE = "name";
     public static final String COLUMN_COURSE_CODE = "code";
 

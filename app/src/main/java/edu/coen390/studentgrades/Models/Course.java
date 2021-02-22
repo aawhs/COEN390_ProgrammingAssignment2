@@ -42,5 +42,10 @@ public class Course {
         return courseCode;
     }
 
+    @Override
+    public String toString() {
+        return courseTitle + "\n" + courseCode;
+    }
+
 
 }

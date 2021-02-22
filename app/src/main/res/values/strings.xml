@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">StudentGrades</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="course_title">Course Title</string>
+    <string name="course_code">Course Code</string>
 </resources>
