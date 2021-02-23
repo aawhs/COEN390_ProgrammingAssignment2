@@ -5,6 +5,8 @@ package edu.coen390.studentgrades.db;
  * Description : Configuration to be used with DBHelper class
  *
  * @author Ahmed Ali
+ * @author ID : 40102454
+ *
  */
 
 public class Config {

@@ -21,6 +21,7 @@ import edu.coen390.studentgrades.db.DBHelper;
  * Description : Course Dialog Fragment Class
  *
  * @author Ahmed Ali
+ * @author ID : 40102454
  * <p>
  * References :
  * COEN 390 - Tutorial EA & EC Videos & Source Codes

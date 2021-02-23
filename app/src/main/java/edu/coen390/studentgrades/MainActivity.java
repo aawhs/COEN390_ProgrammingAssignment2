@@ -22,6 +22,7 @@ import edu.coen390.studentgrades.db.DBHelper;
  * Description : Main Activity Class
  *
  * @author Ahmed Ali
+ * @author ID : 40102454
  * <p>
  * References :
  * COEN 390 - Tutorial EA & EC Videos & Source Codes

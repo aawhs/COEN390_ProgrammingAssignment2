@@ -7,6 +7,8 @@ import org.jetbrains.annotations.NotNull;
  * Description : Assignment Model implementation
  *
  * @author Ahmed Ali
+ * @author ID : 40102454
+ *
  */
 public class Assignment {
     //============================ Data Members ============================
