@@ -16,18 +16,33 @@ import java.util.Objects;
 import edu.coen390.studentgrades.Models.Course;
 import edu.coen390.studentgrades.db.DBHelper;
 
+/**
+ * CourseDialogFragment CLASS
+ * Description : Course Dialog Fragment Class
+ *
+ * @author Ahmed Ali
+ * <p>
+ * References :
+ * COEN 390 - Tutorial EA & EC Videos & Source Codes
+ * @author Tawfiq Jawhar
+ * @author Pierre-Lucas Aubin-Fournier
+ */
+
 public class CourseDialogFragment extends DialogFragment {
+    //============================ DialogFragment Data Members ============================
     private EditText courseTitleEditText;
     private EditText courseCodeEditText;
     private Button saveButton;
     private Button cancelButton;
 
+
+    //============================ Inherited & UI Methods  ============================
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.add_course_fragment, container );
+        View view = inflater.inflate(R.layout.add_course_fragment, container);
 
-        courseTitleEditText =  view.findViewById(R.id.courseTitleEditText);
+        courseTitleEditText = view.findViewById(R.id.courseTitleEditText);
         courseCodeEditText = view.findViewById(R.id.codeEditText);
 
         saveButton = view.findViewById(R.id.saveCourseButton);
@@ -43,13 +58,12 @@ public class CourseDialogFragment extends DialogFragment {
             Course course = new Course(-1, courseTitle, courseCode);
 
 
-            if(!(courseTitle.equals("") || courseCode.equals("")))
-            {
+            if (!(courseTitle.equals("") || courseCode.equals(""))) {
                 DBHelper dbHelper = new DBHelper(getActivity());
                 dbHelper.createCourse(course);
 
-                ((MainActivity)getActivity()).coursesView.clear();
-                ((MainActivity)getActivity()).loadCourses();
+                ((MainActivity) getActivity()).coursesView.clear();
+                ((MainActivity) getActivity()).loadCourses();
 
                 getDialog().dismiss();
             }

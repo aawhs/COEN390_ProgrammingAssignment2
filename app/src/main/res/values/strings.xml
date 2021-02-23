@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">StudentGrades</string>
+    <string name="app_name">Student Grades</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="course_title">Course Title</string>
     <string name="course_code">Course Code</string>
+    <string name="textview">TextView</string>
+    <string name="delete_course">Delete Course</string>
 </resources>

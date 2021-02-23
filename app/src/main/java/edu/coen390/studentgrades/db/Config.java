@@ -1,5 +1,12 @@
 package edu.coen390.studentgrades.db;
 
+/**
+ * DBHelper CONFIG CLASS
+ * Description : Configuration to be used with DBHelper class
+ *
+ * @author Ahmed Ali
+ */
+
 public class Config {
     public static final String DATABASE_NAME = "student-db";
 
